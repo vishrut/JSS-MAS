@@ -7,120 +7,251 @@ Ext.define('Med-Table.view.Schedule',{
         title:'Schedule',
         iconCls:'time',
 
+        layout:'vbox',
+        items:[
+            {   xtype: 'toolbar',
+                ui:'light',
+                height : 'auto',
+                items: [
+                    {
+                        xtype: 'button',
+                        text : '<img src="resources/images/home-small.png">',
+                        handler: function()
+                        {
+                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Home'))
+                        },
+                        padding:'5px'
+                    },
+                    {
+                        xtype: 'spacer'
+                    },
+                    {
+                        xtype: 'button',
+                        text : '<img src="resources/images/reminder-small.png">',
+                        handler: function()
+                        {
+                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Schedule'))
+                        },
+                        padding:'5px'
+                    },
+                    {
+                        xtype: 'button',
+                        text : '<img src="resources/images/instructions-small.png">',
+                        handler: function()
+                        {
+                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Menu'))
+                        },
+                        padding:'5px'
+                    },
+                    {
+                        xtype: 'button',
+                        text : '<img src="resources/images/appoint-small.png">',
+                        handler: function()
+                        {
+                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Menu'))
+                        },
+                        padding:'5px'
+                    }
+
+                ]
+
+            },
+
+            {
+
+            xtype:'container',
+
         layout: 'hbox',
+                flex:1,
         items: [
             {
+                xtype: 'container',
+                id: 'morningctnr',
                 flex: 1,
-                layout:'fit',
+                layout:'vbox',
 
                 items:[
 
                     {
-                        xtype:'toolbar',
-                        docked:'top',
-                        height: 'auto',
-                        ui:'light',
+                        xtype:'container',
+                        height: '286',
+                        style: 'background-color: #63B8FF;',
+
+                        //docked:'top',
+                        //flex:1,
+                        layout : 'hbox',
+
+                        //height: 'auto',
+                        //ui:'light',
                         items: [
                             {xtype: "spacer"},
                             {
                                 xtype: 'button',
-                                cls: 'morningImageButton'
+                                text: '<img src="resources/images/morning-01.png">',
+                                padding:'0px',
+                                //cls: 'morningImageButton',
+                                handler: function()
+                                {
+                                    Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.ExpandedMorning'))
+                                }
                             },
                             {xtype: "spacer"}
                         ]
                     },
                     {
                         xtype:'list',
+                        flex:1,
                         store:'MorningMedicines',
                         itemTpl:'<img src="{icon}"/> <h1>{name:ellipsis(22)}</h1> <h3>{dose:ellipsis(30)}</h3>',
                         itemCls:'medicine-entry',
-                        style: 'background-color: #CCCCCC;'
+                        style: 'background-color: #63B8FF;'
 
                     }
                 ]
             },
             {
+                xtype: 'container',
+                //id: 'morningctnr',
                 flex: 1,
-                layout:'fit',
+                layout:'vbox',
+
                 items:[
+
                     {
-                        xtype:'toolbar',
-                        docked:'top',
-                        height: 'auto',
+                        xtype:'container',
+                        height: '286',
+                        style: 'background-color: #C6E2FF;',
+
+                        //docked:'top',
+                        //flex:1,
+                        layout : 'hbox',
+
+                        //height: 'auto',
+                        //ui:'light',
                         items: [
                             {xtype: "spacer"},
                             {
                                 xtype: 'button',
-                                cls: 'afternoonImageButton'
+                                text: '<img src="resources/images/day-01.png">',
+                                padding:'0px',
+
+                                //padding:'5px',
+                                //cls: 'morningImageButton',
+                                handler: function()
+                                {
+                                    Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.ExpandedMorning'))
+                                }
                             },
                             {xtype: "spacer"}
                         ]
                     },
                     {
                         xtype:'list',
+                        flex:1,
                         store:'AfternoonMedicines',
                         itemTpl:'<img src="{icon}"/> <h1>{name:ellipsis(22)}</h1> <h3>{dose:ellipsis(30)}</h3>',
                         itemCls:'medicine-entry',
-                        style: 'background-color: #759E60;'
+                        style: 'background-color: #C6E2FF;'
+
                     }
                 ]
             },
             {
+                xtype: 'container',
+                //id: 'morningctnr',
                 flex: 1,
-                layout:'fit',
+                layout:'vbox',
+
                 items:[
 
                     {
-                        xtype:'toolbar',
-                        docked:'top',
-                        height: 'auto',
-                        ui:'light',
+                        xtype:'container',
+                        height: '286',
+                        style: 'background-color: #63B8FF;',
+
+                        //docked:'top',
+                        //flex:1,
+                        layout : 'hbox',
+
+                        //height: 'auto',
+                        //ui:'light',
                         items: [
                             {xtype: "spacer"},
                             {
                                 xtype: 'button',
-                                cls: 'eveningImageButton'
+                                text: '<img src="resources/images/evening-01.png">',
+                                padding:'0px',
+
+                                //padding:'5px',
+                                //cls: 'morningImageButton',
+                                handler: function()
+                                {
+                                    Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.ExpandedMorning'))
+                                }
                             },
                             {xtype: "spacer"}
                         ]
                     },
                     {
                         xtype:'list',
+                        flex:1,
                         store:'EveningMedicines',
                         itemTpl:'<img src="{icon}"/> <h1>{name:ellipsis(22)}</h1> <h3>{dose:ellipsis(30)}</h3>',
                         itemCls:'medicine-entry',
-                        style: 'background-color: #CCCCCC;'
+                        style: 'background-color: #63B8FF;'
+
                     }
                 ]
             },
             {
+                xtype: 'container',
+                //id: 'morningctnr',
                 flex: 1,
-                layout:'fit',
+                layout:'vbox',
+
                 items:[
 
                     {
-                        xtype:'toolbar',
-                        docked:'top',
-                        height: 'auto',
+                        xtype:'container',
+                        height: '286',
+                        style: 'background-color: #C6E2FF;',
+
+                        //docked:'top',
+                        //flex:1,
+                        layout : 'hbox',
+
+                        //height: 'auto',
+                        //ui:'light',
                         items: [
                             {xtype: "spacer"},
                             {
                                 xtype: 'button',
-                                cls: 'nightImageButton'
+                                text: '<img src="resources/images/night-01.png">',
+                                padding:'0px',
+
+                                //padding:'5px',
+                                //cls: 'morningImageButton',
+                                handler: function()
+                                {
+                                    Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.ExpandedMorning'))
+                                }
                             },
                             {xtype: "spacer"}
                         ]
                     },
                     {
                         xtype:'list',
+                        flex:1,
                         store:'NightMedicines',
                         itemTpl:'<img src="{icon}"/> <h1>{name:ellipsis(22)}</h1> <h3>{dose:ellipsis(30)}</h3>',
                         itemCls:'medicine-entry',
-                        style: 'background-color: #759E60;'
+                        style: 'background-color: #C6E2FF;'
+
                     }
                 ]
             }
-        ]
+        ]}
+]
 
 
     }

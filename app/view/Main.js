@@ -14,7 +14,9 @@ Ext.define("Med-Table.view.Main", {
             }
         },
 
-        items: [
+        items: [{
+                xtype:'instructions'
+            },
             {
                 xtype:'home'
             },
