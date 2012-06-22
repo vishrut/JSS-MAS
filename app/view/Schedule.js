@@ -139,7 +139,7 @@ Ext.define('Med-Table.view.Schedule',{
                                 //cls: 'morningImageButton',
                                 handler: function()
                                 {
-                                    Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.ExpandedMorning'))
+                                    Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.ExpandedAfternoon'))
                                 }
                             },
                             {xtype: "spacer"}
@@ -186,7 +186,7 @@ Ext.define('Med-Table.view.Schedule',{
                                 //cls: 'morningImageButton',
                                 handler: function()
                                 {
-                                    Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.ExpandedMorning'))
+                                    Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.ExpandedEvening'))
                                 }
                             },
                             {xtype: "spacer"}
@@ -233,7 +233,7 @@ Ext.define('Med-Table.view.Schedule',{
                                 //cls: 'morningImageButton',
                                 handler: function()
                                 {
-                                    Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.ExpandedMorning'))
+                                    Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.ExpandedNight'))
                                 }
                             },
                             {xtype: "spacer"}

@@ -37,7 +37,7 @@ Ext.define('Med-Table.view.CalendarDisplay',{
                             text : '<img src="resources/images/instructions-small.png">',
                             handler: function()
                             {
-                                Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Menu'))
+                                Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Instructions'))
                             },
                             padding:'5px'
                         },
