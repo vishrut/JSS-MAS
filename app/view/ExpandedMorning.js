@@ -18,28 +18,28 @@ Ext.define('Med-Table.view.ExpandedMorning',{
                         text : '<img src="resources/images/home-small.png">',
                         handler: function()
                         {
-                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Home'))
+                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Menu'))
                         },
                         padding:'5px'
                     },
                     {
                         xtype: 'spacer'
                     },
-                    {
-                        xtype: 'button',
-                        text : '<img src="resources/images/reminder-small.png">',
-                        handler: function()
-                        {
-                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Schedule'))
-                        },
-                        padding:'5px'
-                    },
+                    /*{
+                     xtype: 'button',
+                     text : '<img src="resources/images/reminder-small.png">',
+                     handler: function()
+                     {
+                     Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.CalendarDisplay'))
+                     },
+                     padding:'5px'
+                     },*/
                     {
                         xtype: 'button',
                         text : '<img src="resources/images/instructions-small.png">',
                         handler: function()
                         {
-                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Menu'))
+                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Instructions'))
                         },
                         padding:'5px'
                     },
@@ -48,7 +48,7 @@ Ext.define('Med-Table.view.ExpandedMorning',{
                         text : '<img src="resources/images/appoint-small.png">',
                         handler: function()
                         {
-                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Menu'))
+                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Appointment'))
                         },
                         padding:'5px'
                     }
@@ -149,9 +149,9 @@ Ext.define('Med-Table.view.ExpandedMorning',{
                             {
                                 xtype:'list',
                                 flex:1,
-                                //store:'AfternoonMedicines',
-                                //itemTpl:'<img src="{icon}"/><h1>{name:ellipsis(22)}</h1> <h3>{dose:ellipsis(30)}</h3>',
-                                //itemCls:'medicine-entry',
+                                store:'AfternoonMedicines',
+                                itemTpl:'<img src="{icon}"/>',//<h1>{name:ellipsis(22)}</h1> <h3>{dose:ellipsis(30)}</h3>',
+                                itemCls:'medicine-entry',
                                 style: 'background-color: #C6E2FF;'
 
                             }
@@ -196,9 +196,9 @@ Ext.define('Med-Table.view.ExpandedMorning',{
                             {
                                 xtype:'list',
                                 flex:1,
-                                //store:'EveningMedicines',
-                                //itemTpl:'<img src="{icon}"/> <h1>{name:ellipsis(22)}</h1> <h3>{dose:ellipsis(30)}</h3>',
-                                //itemCls:'medicine-entry',
+                                store:'EveningMedicines',
+                                itemTpl:'<img src="{icon}"/>',// <h1>{name:ellipsis(22)}</h1> <h3>{dose:ellipsis(30)}</h3>',
+                                itemCls:'medicine-entry',
                                 style: 'background-color: #63B8FF;'
 
                             }
@@ -243,9 +243,9 @@ Ext.define('Med-Table.view.ExpandedMorning',{
                             {
                                 xtype:'list',
                                 flex:1,
-                                //store:'NightMedicines',
-                                //itemTpl:'<img src="{icon}"/> <h1>{name:ellipsis(22)}</h1> <h3>{dose:ellipsis(30)}</h3>',
-                                //itemCls:'medicine-entry',
+                                store:'NightMedicines',
+                                itemTpl:'<img src="{icon}"/>',// <h1>{name:ellipsis(22)}</h1> <h3>{dose:ellipsis(30)}</h3>',
+                                itemCls:'medicine-entry',
                                 style: 'background-color: #C6E2FF;'
 
                             }

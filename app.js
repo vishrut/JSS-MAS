@@ -5,7 +5,7 @@ Ext.application({
         'Ext.MessageBox'
     ],
 
-    views: ['Main','Home','Schedule','CalendarDisplay','Menu','ExpandedMorning','Instructions'],
+    views: ['Main','Home','Schedule','CalendarDisplay','Menu','ExpandedMorning','Instructions','ExpandedAfternoon','ExpandedEvening','ExpandedNight'],
     models:['Medicine','Instruction'],
     stores:['MorningMedicines','AfternoonMedicines','EveningMedicines','NightMedicines','Instructions'],
     icon: {

@@ -1,12 +1,18 @@
 Ext.define('Med-Table.view.Menu', {
     extend:'Ext.Panel',
     xtype:'menu',
+	
+	initialize: function () {
+        audio = (Ext.getCmp('audio2'));
+        audio.toggle();
+    },
+	
     config:{
          title:'Menu',
          iconCls:'home',
 		
 		items: [
-		{   xtype: 'toolbar',
+		/*{   xtype: 'toolbar',
             ui:'light',
                 height : 'auto',
                 items: [
@@ -52,7 +58,7 @@ Ext.define('Med-Table.view.Menu', {
 
                 ]
 
-            },
+            },*/
 		
 		{
          xtype: 'container',
@@ -68,6 +74,12 @@ Ext.define('Med-Table.view.Menu', {
                  left: '50px',
                  top: '50px'
              },
+			 {
+                        xtype : 'audio',
+                        id:'audio2',
+                        hidden: true,
+                        url   : 'resources/Audio/Menu.mp3'
+                    },
 
          {
             xtype: 'button',
@@ -86,7 +98,7 @@ Ext.define('Med-Table.view.Menu', {
                  text : '<img src="resources/images/next appointment-01.png">',
                  handler: function()
                  {
-                     Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Home'))
+                     Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Appointment'))
                  },
                  //cls: 'nextAppointmentButton',
                  left: '714px',
