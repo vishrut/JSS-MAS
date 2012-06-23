@@ -2,6 +2,10 @@ Ext.define('Med-Table.view.Instructions',{
     extend:'Ext.Panel',
     xtype:'instructions',
 
+    initialize: function () {
+        audio = (Ext.getCmp('audio3'));
+        audio.toggle();
+    },
     config:{
 
         title:'Instructions',
@@ -10,10 +14,16 @@ Ext.define('Med-Table.view.Instructions',{
         layout:'vbox',
         items:[
             {
+                xtype : 'audio',
+                id:'audio3',
+                hidden: true,
+                url : 'resources/Audio/Instruction.mp3'
+            },
+            {
                 xtype: 'toolbar',
-            ui:'light',
-            height : 'auto',
-            items: [
+                ui:'light',
+                height : 'auto',
+                items: [
                 {
                     xtype: 'button',
                     text : '<img src="resources/images/home-small.png">',
@@ -67,9 +77,9 @@ Ext.define('Med-Table.view.Instructions',{
         items: [
                 {
                 xtype: 'image',
-                src: 'resources/images/instructions-01.png',
+                src: 'resources/images/instructions-02.png',
                 flex: 1,
-                margin:'10'
+                margin:'20'
                 },
                 {
                 xtype:'list',
@@ -77,7 +87,7 @@ Ext.define('Med-Table.view.Instructions',{
                 flex:3,
                 margin: '100 0 0 0',
                 store:'Instructions',
-                itemTpl:'<img src="{image}" height="200" width="200" hspace="70" vspace="20"></img>',
+                itemTpl:'<img src="{image}" height="150" width="150" hspace="90" vspace="20"></img>',
                 inline: { wrap: true },
                 scrollable: {
                     direction: 'vertical',

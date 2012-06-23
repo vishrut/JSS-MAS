@@ -1,6 +1,10 @@
 Ext.define('Med-Table.view.Schedule',{
     extend:'Ext.Panel',
     xtype:'schedule',
+    initialize: function () {
+        audio = (Ext.getCmp('audio5'));
+        audio.toggle();
+    },
 
     config:{
 
@@ -13,6 +17,12 @@ Ext.define('Med-Table.view.Schedule',{
                 ui:'light',
                 height : 'auto',
                 items: [
+                    {
+                        xtype : 'audio',
+                        id:'audio5',
+                        hidden: true,
+                        url : 'resources/Audio/MedicineSchedule.mp3'
+                    },
                     {
                         xtype: 'button',
                         text : '<img src="resources/images/home-small.png">',

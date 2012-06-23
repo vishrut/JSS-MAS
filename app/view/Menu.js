@@ -71,7 +71,7 @@ Ext.define('Med-Table.view.Menu', {
                      Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.CalendarDisplay'))
                  },
 
-                 left: '50px',
+                 left: '35px',
                  top: '50px'
              },
 			 {
@@ -86,11 +86,11 @@ Ext.define('Med-Table.view.Menu', {
              text : '<img src="resources/images/instructions-01.png">',
              handler: function()
              {
-                 Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Schedule'))
+                 Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Instructions'))
              },
 
              //cls: 'medicineReminderButton',
-            left: '387px',
+            left: '372px',
 			top: '50px'
          },
              {
@@ -101,7 +101,7 @@ Ext.define('Med-Table.view.Menu', {
                      Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Appointment'))
                  },
                  //cls: 'nextAppointmentButton',
-                 left: '714px',
+                 left: '709px',
                  top: '50px'
 
              }

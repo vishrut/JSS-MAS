@@ -2,13 +2,25 @@ Ext.define('Med-Table.view.Home', {
     extend: 'Ext.Panel',
     xtype: 'home',
 
+    initialize: function () {
+        audio = (Ext.getCmp('audio1'));
+        audio.toggle();
+    },
+
     config: {
         title: 'Home',
         iconCls: 'home',
         xtype: 'container',
         layout: 'hbox',
         pack: 'center',
-        items: [{
+        items: [
+            {
+                xtype : 'audio',
+                id:'audio1',
+                hidden: true,
+                url : 'resources/Audio/Welcome.mp3'
+            },
+            {
             xtype: 'image',
             src: 'resources/images/regcard.png',
             flex: 1,

@@ -150,7 +150,7 @@ Ext.define('Med-Table.view.ExpandedMorning',{
                                 xtype:'list',
                                 flex:1,
                                 store:'AfternoonMedicines',
-                                itemTpl:'<img src="{icon}"/>',//<h1>{name:ellipsis(22)}</h1> <h3>{dose:ellipsis(30)}</h3>',
+                                itemTpl:'<img src="{icon}"/><h6>{name:ellipsis(22)}</h6>',//<h6>{dose:ellipsis(30)}</h6>',
                                 itemCls:'medicine-entry',
                                 style: 'background-color: #C6E2FF;'
 
@@ -197,7 +197,7 @@ Ext.define('Med-Table.view.ExpandedMorning',{
                                 xtype:'list',
                                 flex:1,
                                 store:'EveningMedicines',
-                                itemTpl:'<img src="{icon}"/>',// <h1>{name:ellipsis(22)}</h1> <h3>{dose:ellipsis(30)}</h3>',
+                                itemTpl:'<img src="{icon}"/><h6>{name:ellipsis(22)}</h6>',//<h6>{dose:ellipsis(30)}</h6>',
                                 itemCls:'medicine-entry',
                                 style: 'background-color: #63B8FF;'
 
@@ -244,7 +244,7 @@ Ext.define('Med-Table.view.ExpandedMorning',{
                                 xtype:'list',
                                 flex:1,
                                 store:'NightMedicines',
-                                itemTpl:'<img src="{icon}"/>',// <h1>{name:ellipsis(22)}</h1> <h3>{dose:ellipsis(30)}</h3>',
+                                itemTpl:'<img src="{icon}"/><h6>{name:ellipsis(22)}</h6>',//<h6>{dose:ellipsis(30)}</h6>',
                                 itemCls:'medicine-entry',
                                 style: 'background-color: #C6E2FF;'
 

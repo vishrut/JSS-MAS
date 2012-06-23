@@ -104,9 +104,9 @@ Ext.define('Med-Table.view.ExpandedAfternoon',{
                             {
                                 xtype:'list',
                                 flex:1,
-                                //store:'AfternoonMedicines',
-                                //itemTpl:'<img src="{icon}"/> <h1>{name:ellipsis(22)}</h1> <h3>{dose:ellipsis(30)}</h3>',
-                                //itemCls:'medicine-entry',
+                                store:'MorningMedicines',
+                                itemTpl:'<img src="{icon}"/><h6>{name:ellipsis(22)}</h6>',//<h6>{dose:ellipsis(30)}</h6>',
+                                itemCls:'medicine-entry',
                                 style: 'background-color: #63B8FF;'
 
                             }
@@ -197,9 +197,9 @@ Ext.define('Med-Table.view.ExpandedAfternoon',{
                             {
                                 xtype:'list',
                                 flex:1,
-                                //store:'EveningMedicines',
-                                //itemTpl:'<img src="{icon}"/> <h1>{name:ellipsis(22)}</h1> <h3>{dose:ellipsis(30)}</h3>',
-                                //itemCls:'medicine-entry',
+                                store:'EveningMedicines',
+                                itemTpl:'<img src="{icon}"/><h6>{name:ellipsis(22)}</h6>',//<h6>{dose:ellipsis(30)}</h6>',
+                                itemCls:'medicine-entry',
                                 style: 'background-color: #63B8FF;'
 
                             }
@@ -244,9 +244,9 @@ Ext.define('Med-Table.view.ExpandedAfternoon',{
                             {
                                 xtype:'list',
                                 flex:1,
-                                //store:'NightMedicines',
-                                //itemTpl:'<img src="{icon}"/> <h1>{name:ellipsis(22)}</h1> <h3>{dose:ellipsis(30)}</h3>',
-                                //itemCls:'medicine-entry',
+                                store:'NightMedicines',
+                                itemTpl:'<img src="{icon}"/><h6>{name:ellipsis(22)}</h6>',//<h6>{dose:ellipsis(30)}</h6>',
+                                itemCls:'medicine-entry',
                                 style: 'background-color: #C6E2FF;'
 
                             }

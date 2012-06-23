@@ -2,6 +2,10 @@ Ext.define('Med-Table.view.Appointment',{
     extend:'Ext.Panel',
     xtype:'appointment',
 
+    initialize: function () {
+        audio = (Ext.getCmp('audio4'));
+        audio.toggle();
+    },
     config:{
 
         title:'Next Appointment',
@@ -9,6 +13,12 @@ Ext.define('Med-Table.view.Appointment',{
 
         layout:'vbox',
         items:[
+            {
+                xtype : 'audio',
+                id:'audio4',
+                hidden: true,
+                url : 'resources/Audio/Appointment.mp3'
+            },
             {   xtype: 'toolbar',
                 ui:'light',
                 height : 'auto',
