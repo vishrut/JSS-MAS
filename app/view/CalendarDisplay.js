@@ -55,7 +55,7 @@ Ext.define('Med-Table.view.CalendarDisplay',{
 
                 },
                 {
-                    html: '<embed src="calendar.html" width="100%" height="100%"/>'
+                    html: '<embed src="calendar.html" width="100%" height="85%"/>'
                 }
             ]
         }

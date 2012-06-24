@@ -68,6 +68,7 @@ Ext.define('Med-Table.view.Menu', {
                  text : '<img src="resources/images/medicine reminder_without drop shadow.png">',
                  handler: function()
                  {
+                     audio.stop();
                      Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.CalendarDisplay'))
                  },
 
@@ -86,6 +87,7 @@ Ext.define('Med-Table.view.Menu', {
              text : '<img src="resources/images/instructions-01.png">',
              handler: function()
              {
+                 audio.stop();
                  Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Instructions'))
              },
 
@@ -98,6 +100,7 @@ Ext.define('Med-Table.view.Menu', {
                  text : '<img src="resources/images/next appointment-01.png">',
                  handler: function()
                  {
+                     audio.stop();
                      Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Appointment'))
                  },
                  //cls: 'nextAppointmentButton',

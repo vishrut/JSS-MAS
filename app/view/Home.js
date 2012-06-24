@@ -165,9 +165,82 @@ Ext.define('Med-Table.view.Home', {
                         xtype: 'button',
                         text: 'Submit',
                         ui: 'confirm',
-                        handler: function()
+                        /*handler: function()
                         {
                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Menu'))
+                        },*/
+                        handler: function() {
+                            if (!this.overlay) {
+                                this.overlay = Ext.Viewport.add({
+                                    xtype: 'panel',
+                                    id:'confirmpanel',
+                                    //layour:'vbox',
+                                    modal: true,
+                                    //hideOnMaskTap: true,
+                                    showAnimation: {
+                                        type: 'popIn',
+                                        duration: 250,
+                                        easing: 'ease-out'
+                                    },
+                                    hideAnimation: {
+                                        type: 'popOut',
+                                        duration: 250,
+                                        easing: 'ease-out'
+                                    },
+                                    centered: true,
+                                    width: Ext.os.deviceType == 'Phone' ? 360 : 500,
+                                    height: Ext.os.deviceType == 'Phone' ? 320 : 500,
+                                    styleHtmlContent: true,
+                                    items: [
+                                        {
+                                            docked: 'top',
+                                            xtype: 'toolbar',
+                                            title: 'Confirmation',
+                                            height:'60px'
+                                        },
+                                        {
+                                            xtype: 'image',
+                                            src: 'resources/images/boy.jpg',
+                                            height:'200px',
+                                            margin: 10
+                                        },
+										{
+										docked: 'bottom',
+                                        xtype: 'toolbar',
+                                        height:'100px',
+										items: [
+										{
+											xtype: 'button',
+											text : '<img src="resources/images/tick-01.png">',
+											handler: function()
+											{
+                                                Ext.getCmp('confirmpanel').destroy(),
+                                                audio.stop();
+												Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Menu'))
+											},
+											padding:'2px',
+                                            left:'50px'
+										},
+										{
+											xtype: 'button',
+											text : '<img src="resources/images/cross-01.png">',
+											handler: function (hideOnMaskTap)
+											{
+                                                //Ext.getCmp('confirmpanel').hide(),
+                                                Ext.getCmp('confirmpanel').destroy(),
+                                                audio.stop();
+												Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Home'))
+											},
+											padding:'2px',
+                                            left:'240px'
+										}
+										]}
+										
+                                    ],
+                                    scrollable: true
+                                });
+                            }
+                            this.overlay.show();
                         },
                         flex: 1
                     }]

@@ -28,6 +28,7 @@ Ext.define('Med-Table.view.Appointment',{
                         text : '<img src="resources/images/home-small.png">',
                         handler: function()
                         {
+                            audio.stop();
                             Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Menu'))
                         },
                         padding:'5px'
@@ -40,6 +41,7 @@ Ext.define('Med-Table.view.Appointment',{
                      text : '<img src="resources/images/reminder-small.png">',
                      handler: function()
                      {
+                     audio.stop();
                      Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.CalendarDisplay'))
                      },
                      padding:'5px'
@@ -49,10 +51,11 @@ Ext.define('Med-Table.view.Appointment',{
                         text : '<img src="resources/images/instructions-small.png">',
                         handler: function()
                         {
+                            audio.stop();
                             Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Instructions'))
                         },
                         padding:'5px'
-                    },
+                    }
                     /*{
                         xtype: 'button',
                         text : '<img src="resources/images/appoint-small.png">',
